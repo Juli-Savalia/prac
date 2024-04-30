@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import {todo,brands,card} from "./Record"
+import Filter from './Filter'
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [record,setRecord] = useState(card)
+  
+  const FilterTodo = (to) => {
+    if(to === "All"){
+      setRecord(card);
+    }
+    else
+    {
+      let items = card.filter((val) => val.category === to);
+      setRecord(items);
+    }
+  };
+
+  return(
+    <>
+      <Filter todo = {todo} brands = {brands} card = {card} />
+    </>
+  )
 }
 
 export default App;

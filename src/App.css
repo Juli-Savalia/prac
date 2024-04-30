@@ -2,6 +2,34 @@
   text-align: center;
 }
 
+.bg-darkblue{
+  background-color: #2874f0;
+}
+
+*{
+  list-style: none;
+}
+
+.h-220{
+  height: 150;
+}
+
+.border-grey{
+  border-right: 4px solid grey;
+}
+
+.grey-400{
+  color : rgba(128, 128, 128, 0.618);
+}
+
+.grey-600{
+  color : rgba(128, 128, 128, 0.851);
+}
+
+.fs-12{
+  font-size: 12px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
